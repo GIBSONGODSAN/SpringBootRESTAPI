@@ -24,7 +24,7 @@ public class LinkedlnJobScraperService {
 
             jobListings.add(new LinkelnJobListing(jobTitle, hyperlink));
         }
-
+        System.out.println("Job Listings: " + jobListings.size());
         return jobListings;
     }
 }

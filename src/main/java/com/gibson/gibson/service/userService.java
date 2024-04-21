@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder; // Add missing import statement
 import com.gibson.gibson.domain.User; // Add missing import statement
 import com.gibson.gibson.repository.UserRepository; // Add missing import statement
+import com.google.common.base.Optional;
 
 @Service
 public class userService {
@@ -17,7 +18,6 @@ public class userService {
     public User registerUser(User user) {
         // Implement user registration logic (validation, etc.)
         user.setPassword(passwordEncoder.encode(user.getPassword())); 
-        System.out.println("User password after encoding: " + user.getPassword());
         return userRepository.save(user);
     }
 
@@ -32,4 +32,14 @@ public class userService {
         }
         return null; // Authentication failed
     }
+
+    public User updateMembership(String email, boolean isMember) {
+        User user = userRepository.findByEmail(email);
+        if (user == null) {
+            return null;
+        }
+        user.setIsMember(isMember);
+        return userRepository.save(user); // Saves the updated user
+      }
+      
   }
