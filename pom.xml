@@ -69,9 +69,19 @@
 		<dependency>
 			<groupId>com.squareup.okio</groupId>
 			<artifactId>okio</artifactId>
-			<version>LATEST</version>  
+			<version>3.0.0</version>  
 		</dependency>
-		  
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.9.8</version>
+			<scope>test</scope>
+		</dependency>	
+		<dependency>
+			<groupId>io.rest-assured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>5.2.0</version> <scope>test</scope>  
+		</dependency>		
 	</dependencies>
 
 	<build>
@@ -89,6 +99,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>gibson</finalName>
 	</build>
 
 </project>
