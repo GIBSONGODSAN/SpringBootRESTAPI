@@ -14,6 +14,7 @@ import com.gibson.gibson.domain.IndeedJobListing;
 @Service
 public class IndeedJobScraperService {
 
+    @SuppressWarnings("null")
     public List<IndeedJobListing> scrapeJobs(String url) throws IOException {
         List<IndeedJobListing> jobListings = new ArrayList<>();
         

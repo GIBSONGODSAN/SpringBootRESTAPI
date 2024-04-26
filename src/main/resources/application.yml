@@ -1,0 +1,6 @@
+spring:
+    data:
+        mongodb:
+            database: scrapper
+            host: scrappermongodb
+            port: 27017

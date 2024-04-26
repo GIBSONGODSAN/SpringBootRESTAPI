@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder; // Add missing import statement
 import com.gibson.gibson.domain.User; // Add missing import statement
 import com.gibson.gibson.repository.UserRepository; // Add missing import statement
-import com.google.common.base.Optional;
 
 @Service
 public class userService {
