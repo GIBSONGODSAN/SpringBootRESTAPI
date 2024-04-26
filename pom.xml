@@ -69,7 +69,7 @@
 		<dependency>
 			<groupId>com.squareup.okio</groupId>
 			<artifactId>okio</artifactId>
-			<version>3.0.0</version>  
+			<version>LATEST</version>  
 		</dependency>
 		<dependency>
 			<groupId>org.testng</groupId>
